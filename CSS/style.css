@@ -309,6 +309,7 @@ span:active , span:hover {
 @keyframes spinnerLoading {
 
     50% {
+        pointer-events: none;
         perspective: 3000px;
         transform: translate(-50%, -50%);
         transform-style: preserve-3d;
