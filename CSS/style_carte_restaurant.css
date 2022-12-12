@@ -47,7 +47,7 @@ ul {
 .logo {
     font-family: 'Shrikhand', sans-serif;
     font-size: xx-large;
-
+    
     display: flex;
     justify-content: center;
 
@@ -55,16 +55,12 @@ ul {
 
 .photo_présentation {
     z-index: 0;
-
 }
 
 
 
 .photo_présentation img {
     width: 100%;
-
-
-
 }
 
 .carte {
@@ -104,35 +100,44 @@ h1 {
 }
 
 
+
 .coeur {
     position: relative;
-    font-size: 190%;
-    padding-top: 4px;
-    cursor: pointer;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f7F7F7;
 }
 
-.coeur_vide {
+.coeur * {
     position: absolute;
-    transition: opacity 1s;
-}
-
-.coeur_plein {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.coeur:hover .coeur_vide {
-    opacity: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 
 }
 
-.coeur:hover .coeur_plein {
-    opacity: 1;
-
+.coeur i:first-child {
+    font-weight: bold;
+    color: #c356dc;
 }
+
+.coeur span {
+    display: block;
+    top: 0;
+    height: 100%;
+    transition: all 0.4s;
+    background-color: #f7F7F7;
+}
+
+.coeur:hover span {
+    height: 0;
+}
+
 
 .partie-soulignée {
     border-bottom: solid 3px #99E2D0;
@@ -214,12 +219,12 @@ h1 {
 @keyframes animation_déroulé {
     0% {
         margin-top: 50px;
-        opacity: 0;
+        
     }
 
     100% {
         margin-top: 0px;
-        opacity: 1;
+        
     }
 }
 
@@ -361,6 +366,11 @@ h1 {
     margin-bottom: 4%;
 }
 
+.explore:hover {
+    filter: brightness(1.15);
+    box-shadow: 5px 5px 5px #595959;
+}
+
 
 footer {
     background-color: #353535;
@@ -412,6 +422,10 @@ footer {
 
 
 @media (min-width: 1000px) {
+    .logo {
+        width: 50%;
+        
+    }
     .menus {
         display: flex;
         justify-content: space-around; 
@@ -419,7 +433,6 @@ footer {
     }
     .ordre {
         width: 360px;
-        
     }
 
  
@@ -434,11 +447,25 @@ footer {
         flex-direction: column;
     }
 
+    .photo_présentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .photo_présentation img {
+        height: 500px;
+        width: 1200px;
+        max-width: 1200px;
+
+        
+        
+       
+        
+    }
+
 }
 
-@media (min-width: 1367px) {
-
-}
 
 
 
